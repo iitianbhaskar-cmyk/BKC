@@ -543,7 +543,7 @@ const BKC_DATA_R4 = {"percentile": [99.945, 99.6926, 99.6516, 99.6365, 99.504, 9
       if (!existing || m.marginRank > existing.marginRank) byKey.set(key, m);
     }
     const deduped = Array.from(byKey.values());
-    deduped.sort((a, b) => b.marginRank - a.marginRank);
+    deduped.sort((a, b) => a.marginRank - b.marginRank);
 
     renderResults(deduped);
   });
